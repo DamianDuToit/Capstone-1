@@ -1,7 +1,7 @@
 /* Customer.java
  Factory for the Customer
  Author: Marco Mulondayi Tshimanga (219049505)
- Date: 05 April 2022
+ Date: 03 April 2022
 */
 
 package za.ac.mycput.Factory;
