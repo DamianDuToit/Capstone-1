@@ -5,13 +5,15 @@ package za.ac.mycput.Entity;
  Date: 04 April 2022
 */
 public class Customer {
-    private int id;
+    private String id;
     private String custFirstName;
     private String custLastName;
     private String custGender;
     private String custAddress;
     private long custPhoneNumber;
+    public Customer() {
 
+    }
     public Customer(Builder builder) {
         this.id = builder.custIdNumber;
         this.custFirstName = builder.custFirstName;
@@ -20,6 +22,8 @@ public class Customer {
         this.custAddress = builder.custAddress;
         this.custPhoneNumber = builder.custPhoneNumber;
     }
+
+
 
 
     public String getCustFirstName() {
@@ -54,11 +58,11 @@ public class Customer {
         this.custAddress = custAddress;
     }
 
-    public int getCustIdNumber() {
+    public String getCustIdNumber() {
         return id;
     }
 
-    public void setCustIdNumber(int custIdNumber) {
+    public void setCustIdNumber(String custIdNumber) {
         this.id = custIdNumber;
     }
 
@@ -69,12 +73,25 @@ public class Customer {
     public void setCustPhoneNumber(long custPhoneNumber) {
         this.custPhoneNumber = custPhoneNumber;
     }
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "id=" + id +
+                ", custFirstName='" + custFirstName + '\'' +
+                ", custLastName='" + custLastName + '\'' +
+                ", custGender='" + custGender + '\'' +
+                ", custAddress='" + custAddress + '\'' +
+                ", custPhoneNumber=" + custPhoneNumber +
+                '}';
+    }
+
     public static class Builder {
         private String custFirstName;
         private String custLastName;
         private String custGender;
         private String custAddress;
-        private int custIdNumber;
+        private String custIdNumber;
         private long custPhoneNumber;
 
 
@@ -97,7 +114,7 @@ public class Customer {
             this.custAddress = custAddress;
             return this;
         }
-        public Builder setCustIdNumber( int custIdNumber) {
+        public Builder setCustIdNumber( String custIdNumber) {
             this.custIdNumber = custIdNumber;
             return this;
         }
